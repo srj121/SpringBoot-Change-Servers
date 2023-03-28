@@ -1,0 +1,95 @@
+  Spring Boot is a popular Java framework for building web applications. 
+  One of the key features of Spring Boot is its ability to embed web servers, eliminating the need for a separate web server installation.
+  Spring Boot supports several web servers by default, including Tomcat, Undertow, and Jetty.
+
+  If you want to change servers you should follow this steps 
+
+1.  Tomcat { Default } Server
+
+    > Tomcat is the default web server for Spring Boot applications. 
+    It is a popular open-source web server that is widely used for Java web applications.
+    It provides support for Java Servlets, JavaServer Pages (JSP), and Java Expression Language (EL).
+
+
+2.UnderTow Server
+
+  > Undertow is another web server supported by Spring Boot.
+  It is a lightweight, high-performance web server that is designed to be embedded in applications.
+  It is a popular choice for microservices and other lightweight applications.
+
+
+3.Jetty Server
+
+  > Jetty is a third web server that Spring Boot supports.
+  It is a lightweight and scalable web server that is designed to be embedded in applications.
+  Jetty is a popular choice for web applications that require high performance and scalability.
+
+* Spring Boot makes it easy to switch between web servers by simply changing the dependency in your project's build file.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Examples: 
+
+1. 
+
+  Here is the example of Tomcat 
+
+  >Maven (POM) File.
+
+ <dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.6.2</version>
+</dependency>
+
+ > Gradle 
+  
+  implementation 'org.springframework.boot:spring-boot-starter-web:2.6.2'
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+
+2. Here are the steps to switch from Tomcat to Jetty.
+
+  >Maven (POM) File.
+  
+  <dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-web</artifactId>
+  <version>2.6.2</version>
+  </dependency>
+  
+  > Gradle 
+  
+  implementation 'org.springframework.boot:spring-boot-starter-web:2.6.2'
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------- 
+  
+  3. Here are the steps to switch from Tomcat to Jetty.
+
+  >Maven (POM) File.
+  
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-undertow</artifactId>
+  <version>2.6.2</version>
+</dependency>
+
+  
+   > Gradle 
+   
+   implementation 'org.springframework.boot:spring-boot-starter-undertow:2.6.2'
+
+   ---------------------------------------------------------------------------------------------------------------------------------------------------------------  
+  
+  * You can find out which web server your Spring Boot application is using by looking at the console output when you run the application.
+  
+  1.2022-04-01 10:47:34.292  INFO 13184 --- [           main] o.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.54]
+  2.2022-04-01 10:47:34.292  INFO 13184 --- [           main] io.undertow.servlet.core.DeploymentManager : Starting deployment of servlet context /app
+  3.2022-04-01 10:47:34.292  INFO 13184 --- [           main] org.eclipse.jetty.server.Server         : jetty-9.4.45.v20201120; built: 2020-11-20T18:25:30.918Z; git: 562b1c1c1d7aab9a31e1b2a88f34ddc991f2041b; jvm 1.8.0_311-b07
+
+  
+
+  
+  
+          
